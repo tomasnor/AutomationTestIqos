@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import utils.Driver;
 
 public class Common {
@@ -23,7 +24,7 @@ public class Common {
         Driver.close();
     }
 
-    private static WebElement getElement(By locator) {
+    public static WebElement getElement(By locator) {
         return Driver.getDriver().findElement(locator);
     }
 
@@ -38,6 +39,18 @@ public class Common {
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
     }
+
+    public static String getElementAttributeValue(By locator, String attributeName) {
+        return getElement(locator).getAttribute(attributeName);
+    }
+
+    public static void selectOptionByValue(By locator, String value) {
+        WebElement element = getElement(locator);
+        Select selectElement = new Select(element);
+        selectElement.selectByValue(value);
+    }
+
+
 
 
 }
