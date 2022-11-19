@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import pages.iqos.AgeVerificationPage;
 import utils.Driver;
 
 public class Common {
@@ -51,6 +52,14 @@ public class Common {
     }
 
 
+    public static void confirmYourAgeToContinue() {
+        String month = "2";
+        String year = "2000";
 
-
+        AgeVerificationPage.checkIfAgeVerificationFormIsVisible();
+        AgeVerificationPage.selectMonthOfBirthOnDropdown(month);
+        AgeVerificationPage.selectYearOfBirthOnDropdown(year);
+        AgeVerificationPage.clickButtonPatikrinti();
+        AgeVerificationPage.checkIfMainPageIsOpened();
+    }
 }
