@@ -8,7 +8,7 @@ import pages.iqos.HomePage;
 import pages.iqos.ShopPage;
 import tests.TestBase;
 
-public class ShopPageTest extends TestBase {
+public class ShopTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {

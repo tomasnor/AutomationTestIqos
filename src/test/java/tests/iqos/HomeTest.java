@@ -8,7 +8,7 @@ import tests.TestBase;
 
 import java.util.Objects;
 
-public class HomePageTest extends TestBase {
+public class HomeTest extends TestBase {
 
     @BeforeMethod
     @Override
