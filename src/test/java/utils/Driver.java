@@ -22,13 +22,6 @@ public class Driver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
     }
 
-    private static ChromeOptions getOptions() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("window-size=2000,3000");
-        options.addArguments("--force-device-scale-factor=0.85");
-        return options;
-    }
-
     public static void close() {
         driver.quit();
     }

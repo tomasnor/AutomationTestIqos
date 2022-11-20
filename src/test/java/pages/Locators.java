@@ -13,12 +13,30 @@ public class Locators {
         }
 
         public static class HomePage {
-            public static By buttonLanguageSwitch = By.xpath("//button[@data-toggle='#language-list-1']" +
-                    "/span[@class='c-language-switcher__list__ico c-footer__lang-list__ico']");
+            public static By buttonLanguageSwitch = By.xpath(
+                    "//button[@data-toggle='#language-list-1']" +
+                            "/span[@class='c-language-switcher__list__ico c-footer__lang-list__ico']");
             public static By buttonApieIqos = By.xpath("//a[@data-name='Apie IQOS']");
             public static By aEnglish = By.xpath(
                     "//div[@id='language-wrapper-1']//a[@href='https://lt.iqos.com/en']");
             public static By buttonAboutIqos = By.xpath("//a[@data-name='About IQOS']");
+            public static By aEshop = By.xpath("//a[@data-nav_taxonomy='E-shop']");
+            public static By aVisosPrekes = By.xpath("//li[@data-nav_taxonomy=\"All products\"]" +
+                    "/a[@href='https://lt.iqos.com/lt/parduotuve']");
+        }
+
+        public static class ShopPage {
+
+            public static By h4MiniCart = By.xpath("//div[@class='prod-desc']/h4");
+
+            public static By chooseProductByName(String name) {
+                return By.xpath(
+                        String.format("//div[@id='grid_list_166']//div[@class='product-details ']" +
+                                "/div[@data-same-size='product_title']/a/div[@data-ca-title='%s']", name));
+            }
+
+            public static By buttonIkrepseli = By.xpath("//button[contains(text(),\"Į Krepšelį\")]");
+            public static By h3MiniCart = By.xpath("//div[@id='minicart']/header/h3");
         }
     }
 }
