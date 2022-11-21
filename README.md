@@ -36,7 +36,7 @@ Expected result: After fulfilling age confirmation form we should be directed to
 
 1. Open URL: https://lt.iqos.com/lt
 2. Select the month of birth in dropdown menu: "Balandis"
-3. Select the year of birth in dropdown menu: 2000
+3. Select the year of birth in dropdown menu: 2011
 4. Click button "Patikrinti".
 
 Expected result: After fulfilling age confirmation form we shouldn't be directed to the homepage.
