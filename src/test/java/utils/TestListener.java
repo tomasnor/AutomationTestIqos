@@ -15,10 +15,10 @@ import java.util.UUID;
 public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
-        takeScreenShot();
+        takeScreenShot("failure");
     }
 
-    private void takeScreenShot() {
+    private void takeScreenShot(String status) {
         try {
 
             TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
@@ -28,8 +28,8 @@ public class TestListener implements ITestListener {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH_mm_ss_SSS");
             String dateAndTime = localDateTime.format(formatter);
 
-            String directory = "./screenshots";
-            String fileName = "/some_screenshot_" + dateAndTime + "_" + UUID.randomUUID() + ".png";
+            String directory = "./screenshots/";
+            String fileName = status + "_screenshot_" + dateAndTime + "_" + UUID.randomUUID() + ".png";
 
             File screenshotFile = new File(directory + fileName);
 
