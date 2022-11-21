@@ -29,6 +29,8 @@ public class Locators {
         public static class ShopPage {
 
             public static By h4MiniCart = By.xpath("//div[@class='prod-desc']/h4");
+            public static By aCartMainNav = By.xpath("//a[@href='https://lt.iqos.com/lt/krepselis'" +
+                    " and @class='c-nav4__icon header-icon-cart header-icon js-cart-icon']");
 
             public static By chooseProductByName(String name) {
                 return By.xpath(
@@ -38,6 +40,11 @@ public class Locators {
 
             public static By buttonIkrepseli = By.xpath("//button[contains(text(),\"Į Krepšelį\")]");
             public static By h3MiniCart = By.xpath("//div[@id='minicart']/header/h3");
+        }
+
+        public static class CartPage {
+            public static By aPasalinti = By.xpath("//a[@class=' emph delete-cart-item']");
+            public static By h1JusuKrepselis = By.xpath("//div[@class='content-wrapper']/h1");
         }
     }
 }

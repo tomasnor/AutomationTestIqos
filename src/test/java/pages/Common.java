@@ -30,10 +30,6 @@ public class Common {
         return Driver.getDriver().findElement(locator);
     }
 
-    public static void sendKeysToElement(By locator, String keys) {
-        getElement(locator).sendKeys(keys);
-    }
-
     public static void clickElement(By locator) {
         getElement(locator).click();
     }
@@ -42,16 +38,11 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static String getElementAttributeValue(By locator, String attributeName) {
-        return getElement(locator).getAttribute(attributeName);
-    }
-
     public static void selectOptionByValue(By locator, String value) {
         WebElement element = getElement(locator);
         Select selectElement = new Select(element);
         selectElement.selectByValue(value);
     }
-
 
     public static void confirmYourAgeToContinue() {
         String month = "2";

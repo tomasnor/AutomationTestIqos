@@ -29,10 +29,15 @@ public class ShopPage {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.ShopPage.h3MiniCart));
         return Common.getTextFromElement(Locators.Iqos.ShopPage.h3MiniCart);
-
     }
 
     public static String checkWhichProductWasAddedToCart() {
         return Common.getTextFromElement(Locators.Iqos.ShopPage.h4MiniCart);
+    }
+
+    public static void clickOnCartInMainNav() {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(7));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.ShopPage.h3MiniCart));
+        Common.clickElementWithJs(Locators.Iqos.ShopPage.aCartMainNav);
     }
 }
