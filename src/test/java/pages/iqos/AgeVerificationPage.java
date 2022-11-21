@@ -1,7 +1,7 @@
 package pages.iqos;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.ElementClickInterceptedException;
 import pages.Common;
 import pages.Locators;
 
@@ -32,7 +32,17 @@ public class AgeVerificationPage {
         Common.clickElement(Locators.Iqos.AgeVerificationPage.buttonPatvirtinti);
     }
 
-    public static void checkIfMainPageIsOpened() {
-        Common.getElement(Locators.Iqos.AgeVerificationPage.mainPage);
+    public static boolean checkIfMainPageIsOpened() {
+        try {
+            Common.clickElement(Locators.Iqos.HomePage.aEshop);
+        } catch (ElementClickInterceptedException e) {
+            System.out.println("Main page is not opened");
+            return false;
+        }
+        return true;
+    }
+
+    public static String readTextInAgeFormAfterEntering() {
+        return Common.getTextFromElement(Locators.Iqos.AgeVerificationPage.paragraphAgeGateStep);
     }
 }

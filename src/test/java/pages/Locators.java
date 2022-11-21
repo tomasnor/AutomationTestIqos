@@ -9,7 +9,8 @@ public class Locators {
             public static By selectMonth = By.xpath("//select[@id='age_gate_month']");
             public static By selectYear = By.xpath("//select[@id='age_gate_year']");
             public static By buttonPatvirtinti = By.xpath("//a[@id='age-gate-check']");
-            public static By mainPage = By.xpath("//main[@class='page-main ']");
+            public static By headerMainPage = By.xpath("//header[@id='header']");
+            public static By paragraphAgeGateStep = By.xpath("//p[@class='age-gate-step-text']");
         }
 
         public static class HomePage {
