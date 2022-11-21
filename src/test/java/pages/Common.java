@@ -40,7 +40,6 @@ public class Common {
         String month = "2";
         String year = "2000";
 
-        AgeVerificationPage.checkIfAgeVerificationFormIsVisible();
         AgeVerificationPage.selectMonthOfBirthOnDropdown(month);
         AgeVerificationPage.selectYearOfBirthOnDropdown(year);
         AgeVerificationPage.clickButtonPatikrinti();

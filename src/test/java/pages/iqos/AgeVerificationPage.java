@@ -1,17 +1,18 @@
 package pages.iqos;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Common;
 import pages.Locators;
+import utils.Driver;
+
+import java.time.Duration;
 
 public class AgeVerificationPage {
+
     public static void openUrl(String url) {
         Common.openUrl(url);
-    }
-
-    public static void checkIfAgeVerificationFormIsVisible() {
-        Common.getElement(By.id("agree-question"));
     }
 
     public static void selectMonthOfBirthOnDropdown(String value) {
@@ -43,6 +44,9 @@ public class AgeVerificationPage {
     }
 
     public static String readTextInAgeFormAfterEntering() {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                Locators.Iqos.AgeVerificationPage.paragraphAgeGateStep));
         return Common.getTextFromElement(Locators.Iqos.AgeVerificationPage.paragraphAgeGateStep);
     }
 }
