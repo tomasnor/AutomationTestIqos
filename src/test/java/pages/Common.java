@@ -3,9 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.iqos.AgeVerificationPage;
 import utils.Driver;
+
+import java.time.Duration;
 
 public class Common {
 
@@ -73,5 +77,21 @@ public class Common {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void scrollToTheBottomOfPage() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+
+    public static void scrollIntoViewOfElement(By locator) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement Element = Common.getElement(locator);
+        js.executeScript("arguments[0].scrollIntoView();", Element);
     }
 }

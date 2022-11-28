@@ -1,10 +1,7 @@
 package pages.iqos;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import pages.Common;
 import pages.Locators;
-import utils.Driver;
 
 public class CartPage {
     public static void openUrl(String url) {
@@ -16,9 +13,7 @@ public class CartPage {
     }
 
     public static void clickLinkPasalinti() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement Element = Common.getElement(Locators.Iqos.CartPage.aPasalinti);
-        js.executeScript("arguments[0].scrollIntoView();", Element);
+        Common.scrollIntoViewOfElement(Locators.Iqos.CartPage.aPasalinti);
         Common.clickElementWithJs(Locators.Iqos.CartPage.aPasalinti);
     }
 

@@ -1,14 +1,7 @@
 package pages.iqos;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Common;
 import pages.Locators;
-import utils.Driver;
-
-import java.time.Duration;
 
 public class HomePage {
     public static void openUrl(String url) {
@@ -21,8 +14,7 @@ public class HomePage {
     }
 
     public static void clickLanguageChangeButton() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        Common.scrollToTheBottomOfPage();
         Common.clickElementWithJs(Locators.Iqos.HomePage.buttonLanguageSwitch);
     }
 
@@ -35,9 +27,7 @@ public class HomePage {
     }
 
     public static String readTextFromButtonEnglishLanguage() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        WebElement Element = Common.getElement(Locators.Iqos.HomePage.buttonAboutIqos);
-        js.executeScript("arguments[0].scrollIntoView();", Element);
+        Common.scrollIntoViewOfElement(Locators.Iqos.HomePage.buttonAboutIqos);
         return Common.getTextFromElement(Locators.Iqos.HomePage.buttonAboutIqos);
     }
 
@@ -46,14 +36,12 @@ public class HomePage {
     }
 
     public static void clickLinkIqos3DuoLinija() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.HomePage.aIqos3Duo));
+        Common.waitForElementToBeVisible(Locators.Iqos.HomePage.aIqos3Duo);
         Common.clickElement(Locators.Iqos.HomePage.aIqos3Duo);
     }
 
     public static void clickLinkVisosIqos3DuoPrekes() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.HomePage.aIqos3DuoVisosPrekes));
+        Common.waitForElementToBeVisible(Locators.Iqos.HomePage.aIqos3DuoVisosPrekes);
         Common.clickElement(Locators.Iqos.HomePage.aIqos3DuoVisosPrekes);
     }
 }
