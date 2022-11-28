@@ -1,5 +1,7 @@
 package pages.iqos;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Common;
@@ -18,6 +20,9 @@ public class ShopPage {
     }
 
     public static void clickOnProductWeChooseLink(String name) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement Element = Common.getElement(Locators.Iqos.ShopPage.chooseProductByName(name));
+        js.executeScript("arguments[0].scrollIntoView();", Element);
         Common.clickElementWithJs(Locators.Iqos.ShopPage.chooseProductByName(name));
     }
 

@@ -43,7 +43,6 @@ public class Common {
         AgeVerificationPage.selectMonthOfBirthOnDropdown(month);
         AgeVerificationPage.selectYearOfBirthOnDropdown(year);
         AgeVerificationPage.clickButtonPatikrinti();
-        AgeVerificationPage.checkIfMainPageIsOpened();
     }
 
     public static void checkIfWebPageIsLoaded(String url) {
@@ -66,5 +65,13 @@ public class Common {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].click()", element);
 
+    }
+
+    public static void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

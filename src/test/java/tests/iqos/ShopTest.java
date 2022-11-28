@@ -15,14 +15,14 @@ public class ShopTest extends TestBase {
         ShopPage.openUrl("https://lt.iqos.com/lt");
         HomePage.confirmYourAgeToAccessHomePage();
         HomePage.clickLinkEparduotuve();
-        HomePage.clickLinkVisosPrekes();
+        HomePage.clickLinkIqos3DuoLinija();
+        HomePage.clickLinkVisosIqos3DuoPrekes();
     }
 
     @DataProvider(name = "addToCartDataProvider")
     public Object[][] dataProviderFunction() {
         return new Object[][]{
-                {"https://lt.iqos.com/lt/parduotuve", "lil SOLID 2.0", "Prekė įdėta į"},
-                {"https://lt.iqos.com/lt/parduotuve", "IQOS 3 DUO Sistema", "Prekė įdėta į"}
+                {"https://lt.iqos.com/lt/parduotuve/3-duo", "IQOS 3 DUO Sistema", "Prekė įdėta į"}
         };
     }
 

@@ -44,12 +44,18 @@ public class HomePage {
     }
 
     public static void clickLinkEparduotuve() {
-        Common.clickElement(Locators.Iqos.HomePage.aEshop);
+        Common.clickElementWithJs(Locators.Iqos.HomePage.aEshop);
     }
 
-    public static void clickLinkVisosPrekes() {
+    public static void clickLinkIqos3DuoLinija() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.HomePage.aVisosPrekes));
-        Common.clickElement(Locators.Iqos.HomePage.aVisosPrekes);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.HomePage.aIqos3Duo));
+        Common.clickElement(Locators.Iqos.HomePage.aIqos3Duo);
+    }
+
+    public static void clickLinkVisosIqos3DuoPrekes() {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.Iqos.HomePage.aIqos3DuoVisosPrekes));
+        Common.clickElement(Locators.Iqos.HomePage.aIqos3DuoVisosPrekes);
     }
 }

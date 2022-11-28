@@ -22,8 +22,10 @@ public class Locators {
                     "//div[@id='language-wrapper-1']//a[@href='https://lt.iqos.com/en']");
             public static By buttonAboutIqos = By.xpath("//a[@data-name='About IQOS']");
             public static By aEshop = By.xpath("//a[@data-nav_taxonomy='E-shop']");
-            public static By aVisosPrekes = By.xpath("//li[@data-nav_taxonomy=\"All products\"]" +
-                    "/a[@href='https://lt.iqos.com/lt/parduotuve']");
+            public static By aIqos3Duo = By.xpath("//a[contains(text(),'IQOS 3 DUO')]");
+            public static By aIqos3DuoVisosPrekes =
+                    By.xpath("//a[@href='https://lt.iqos.com/lt/parduotuve/3-duo' " +
+                            "and @class='c-nav4__third__item__link']");
         }
 
         public static class ShopPage {
@@ -34,8 +36,7 @@ public class Locators {
 
             public static By chooseProductByName(String name) {
                 return By.xpath(
-                        String.format("//div[@id='grid_list_166']//div[@class='product-details ']" +
-                                "/div[@data-same-size='product_title']/a/div[@data-ca-title='%s']", name));
+                        String.format("//h3[@data-ca-title=\"%s\"]", name));
             }
 
             public static By buttonIkrepseli = By.xpath("//button[contains(text(),\"Į Krepšelį\")]");
