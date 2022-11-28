@@ -17,13 +17,14 @@ public class CartTest extends TestBase {
         CartPage.openUrl("https://lt.iqos.com/lt");
         HomePage.confirmYourAgeToAccessHomePage();
         HomePage.clickLinkEparduotuve();
-        HomePage.clickLinkVisosPrekes();
+        HomePage.clickLinkIqos3DuoLinija();
+        HomePage.clickLinkVisosIqos3DuoPrekes();
     }
 
     @DataProvider(name = "removeItemFromCartDataProvider")
     public Object[][] dataProviderFunctionItemDelete() {
         return new Object[][]{
-                {"https://lt.iqos.com/lt/krepselis", "lil SOLID 2.0", "Jūsų krepšelis yra tuščias"},
+                {"https://lt.iqos.com/lt/krepselis", "IQOS 3 DUO Sistema", "Jūsų krepšelis yra tuščias"},
         };
     }
 
