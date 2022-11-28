@@ -62,9 +62,10 @@ Expected result: Page language is switched from Lithuanian to English.
 1. Open URL: https://lt.iqos.com/lt
 2. Confirm your age.
 3. Click link "E. parduotuvė" at main page menu.
-4. Choose option "Visos prekės".
-5. Choose the product you want to add to the cart and click link.
-6. Click button "Į krepšelį".
+4. Choose option "IQOS 3 DUO linija".
+5. Choose option "Viso IQOS 3 DUO prekės"
+6. Choose the product you want to add to the cart and click link.
+7. Click button "Į krepšelį".
 
 Expected result: The "mini cart" field at the right position of the
 page appeared. It contains text that your product was added to the cart.
@@ -76,11 +77,12 @@ Mini cart contains exact product which you've chosen.
 1. Open URL: https://lt.iqos.com/lt
 2. Confirm your age.
 3. Click link "E. parduotuvė" at main page menu.
-4. Choose option "Visos prekės".
-5. Choose the product you want to add to the cart and click link.
-6. Click button "Į krepšelį".
-7. Click image "cart" at the navigation menu.
-8. Click link "Pašalinti".
+4. Choose option "IQOS 3 DUO linija".
+5. Choose option "Viso IQOS 3 DUO prekės"
+6. Choose the product you want to add to the cart and click link.
+7. Click button "Į krepšelį".
+8. Click image "cart" at the navigation menu.
+9. Click link "Pašalinti" below the added product.
 
 Expected result: The item removal was successful. 
 The text which contains words "Jūsų krepšelis yra tuščias"
