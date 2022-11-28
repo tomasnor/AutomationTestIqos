@@ -23,7 +23,7 @@ public class HomePage {
     public static void clickLanguageChangeButton() {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-        Common.clickElement(Locators.Iqos.HomePage.buttonLanguageSwitch);
+        Common.clickElementWithJs(Locators.Iqos.HomePage.buttonLanguageSwitch);
     }
 
     public static String readTextFromButtonCurrentLanguage() {
@@ -33,7 +33,7 @@ public class HomePage {
     public static void clickOptionEnglish() {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-        Common.clickElement(Locators.Iqos.HomePage.aEnglish);
+        Common.clickElementWithJs(Locators.Iqos.HomePage.aEnglish);
     }
 
     public static String readTextFromButtonEnglishLanguage() {
