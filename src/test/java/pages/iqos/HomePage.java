@@ -31,8 +31,6 @@ public class HomePage {
     }
 
     public static void clickOptionEnglish() {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         Common.clickElementWithJs(Locators.Iqos.HomePage.aEnglish);
     }
 
