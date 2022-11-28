@@ -24,7 +24,7 @@ public class CartTest extends TestBase {
     @DataProvider(name = "removeItemFromCartDataProvider")
     public Object[][] dataProviderFunctionItemDelete() {
         return new Object[][]{
-                {"https://lt.iqos.com/lt/krepselis", "IQOS 3 DUO Sistema", "Jūsų krepšelis yra tuščias"},
+                {"https://lt.iqos.com/lt/krepselis", "IQOS 3 DUO Sistema", "Jūsų krepšelis yra tuščias"}
         };
     }
 
