@@ -80,7 +80,7 @@ public class Common {
     }
 
     public static void waitForElementToBeVisible(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(8));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
